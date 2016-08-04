@@ -49,7 +49,7 @@
         padding: 8px 10px;
         border: 2px solid #ddd;
         border-radius: 5px;
-        width: 300px;
+        width: 100%;
         font-size: 1.1em;
       }
 
@@ -58,6 +58,7 @@
         border-color: #3498db;
         color: #fff;
         cursor: pointer;
+        margin-top: 10px;
       }
 
       input:focus {
@@ -69,9 +70,31 @@
         margin: 10px auto;
       }
 
+      form {
+        width: 300px;
+        margin: auto;
+      }
+
       .asterisk {
         color: #e74c3c;
         font-size: 10px;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .row .mc-field-group {
+        flex: 1;
+      }
+
+      .row > * {
+        margin-right: 10px;
+      }
+
+      .row > *:last-child {
+        margin-right: 0;
       }
 
       hr {
@@ -122,10 +145,21 @@
     </style>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" rel="stylesheet">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3498db">
+    <meta name="apple-mobile-web-app-title" content="Pixels Conference">
+    <meta name="application-name" content="Pixels Conference">
+    <meta name="theme-color" content="#ffffff">
+
   </head>
   <body>
 
-    <svg width="420" height="420">
+    <svg width="420" height="420" alt="Pixels Conference Logo">
       <g>
         <rect fill="#E74C3C" x="60" y="60" width="300" height="300" rx="16"></rect>
         <rect fill="#27AE60" x="60" y="60" width="300" height="300" rx="16"></rect>
@@ -144,17 +178,19 @@
     <div id="mc_embed_signup">
       <form action="//pixelsconf.us1.list-manage.com/subscribe/post?u=18168f0c3d7668adab7eeb964&amp;id=877f8a1d85" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div id="mc_embed_signup_scroll">
+            <div class="row">
+              <div class="mc-field-group">
+                <label for="mce-FNAME">First Name </label>
+                <input type="text" name="FNAME">
+              </div>
+              <div class="mc-field-group">
+                <label for="mce-LNAME">Last Name </label>
+                <input type="text" name="LNAME">
+              </div>
+            </div>
             <div class="mc-field-group">
               <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            </div>
-            <div class="mc-field-group">
-              <label for="mce-FNAME">First Name </label>
-              <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-            </div>
-            <div class="mc-field-group">
-              <label for="mce-LNAME">Last Name </label>
-              <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL">
             </div>
             <div id="mce-responses" class="clear">
               <div class="response" id="mce-error-response" style="display:none"></div>
@@ -173,5 +209,6 @@
         <a href="https://twitter.com/pixelsconf">@pixelsconf</a> | <a href="mailto:hello@pixelconf.com">hello@pixelconf.com</a></a>
       </small>
     </p>
+    <br>
   </body>
 </html>
