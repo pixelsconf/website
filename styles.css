@@ -100,7 +100,7 @@ hr {
 }
 
 svg {
-  animation: rotating 180s linear infinite;
+  animation: rotating 300s linear infinite;
 }
 
 g {
@@ -154,11 +154,6 @@ g {
 @keyframes rotating {
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
-}
-
-@keyframes rotating-reversed {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 @keyframes blue-animation {
