@@ -6,147 +6,7 @@
 
     <title>Pixels Conference - Code, Art, Science &amp; Technology</title>
 
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        text-align: center;
-        padding-top: 20px;
-      }
-
-      body, input {
-        font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        color: #444;
-        font-smoothing: antialiased;
-      }
-
-      a {
-        color: #3498db;
-        text-decoration: none;
-      }
-
-      h1 {
-        font-weight: 600;
-      }
-
-      h2, h3 {
-        font-weight: 300;
-      }
-
-      p {
-        font-weight: 300;
-      }
-
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 0.8em;
-        color: #666;
-      }
-
-      input {
-        transition: all 0.2s ease-in-out;
-        padding: 8px 10px;
-        border: 2px solid #ddd;
-        border-radius: 5px;
-        width: 100%;
-        font-size: 1.1em;
-        -webkit-appearance: none;
-      }
-
-      input[type=submit] {
-        background: #3498db;
-        border-color: #3498db;
-        color: #fff;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-
-      input:focus {
-        outline: none;
-        border-color: #3498db;
-      }
-
-      .mc-field-group {
-        margin: 10px auto;
-      }
-
-      form {
-        width: 300px;
-        margin: auto;
-      }
-
-      .asterisk {
-        color: #e74c3c;
-        font-size: 10px;
-      }
-
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .row .mc-field-group {
-        flex: 1;
-      }
-
-      .row > * {
-        margin-right: 10px;
-      }
-
-      .row > *:last-child {
-        margin-right: 0;
-      }
-
-      hr {
-        border: none;
-        border-bottom: 2px solid #ccc;
-        width: 60px;
-        margin: 40px auto;
-        border-radius: 2px;
-      }
-
-      g {
-        isolation: isolate;
-      }
-
-      rect {
-        transform-origin: center;
-        mix-blend-mode: screen;
-        animation-duration: 3500ms;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-      }
-
-      rect:nth-child(1) {
-        mix-blend-mode: normal;
-        transform: rotate(-45deg);
-      }
-
-      rect:nth-child(2) {
-        transform: rotate(-45deg);
-        animation-name: blue-animation;
-      }
-
-      rect:nth-child(3) {
-        transform: rotate(-45deg);
-        animation-name: green-animation;
-      }
-
-      @keyframes blue-animation {
-        from { transform: rotate(-45deg); }
-        to { transform: rotate(-75deg); }
-      }
-
-      @keyframes green-animation {
-        from { transform: rotate(-45deg); }
-        to { transform: rotate(-105deg); }
-      }
-
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600" rel="stylesheet">
 
 
@@ -164,9 +24,13 @@
 
     <svg width="320" height="320" alt="Pixels Conference Logo">
       <g>
-        <rect fill="#E74C3C" x="60" y="60" width="216" height="216" rx="20"></rect>
-        <rect fill="#27AE60" x="60" y="60" width="216" height="216" rx="20"></rect>
-        <rect fill="#3498DB" x="60" y="60" width="216" height="216" rx="20"></rect>
+        <rect class="logo-red" fill="#E74C3C" x="60" y="60" width="216" height="216" rx="20"></rect>
+        <g class="parallax">
+          <rect  class="logo-green" fill="#27AE60" x="60" y="60" width="216" height="216" rx="20"></rect>
+        </g>
+        <g class="parallax">
+          <rect class="logo-blue" fill="#3498DB" x="60" y="60" width="216" height="216" rx="20"></rect>
+        </g>
       </g>
     </svg>
 
